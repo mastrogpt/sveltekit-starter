@@ -1,41 +1,38 @@
-# Nuvolaris MastroGPT
+# create-svelte
 
-Build easily AI applications with MastroGPT!
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-# Setup
+## Creating a project
 
-You can run Nuvolaris Starter: 
-- Online with Codespace 
-- Locally with Docker
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Online Setup 
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-- Get a GitHub account
-- Fork this repo in your own account
-- Start it with Codespaces (you have 60 free hours)
-- See below for setup.
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-## Local Setup 
+## Developing
 
-- Install Docker and VScode in your machine
-- Clone this repo
-- Open it in VSCode
-- Press F1  and the "Reopen in Container"
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-# Environments and Secrets
+```bash
+npm run dev
 
-- Copy the `.env.example` in `.env`
-- Add your secrets there (do not commit them - it is in .gitignore)
-- Add non secrets envirornment variables in packages/.env
-- Pass secrets and environments to your function with `#--param ARGUMENT "$VARIABLE"`
-- Read the secrets as function arguments
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-# Development
+## Building
 
-Use the Nuvolaris Icon to execute the functions, or use the following commands from the terminal:
+To create a production version of your app:
 
-- `devel` (or `nuv ide devel` to run a local development environment
-- `deploy` (or `nuv ide deploy`) to deploy everything in cloud
-- `login` (or `nuv ide login`) to login again
+```bash
+npm run build
+```
 
-Check `nuv ide` subcommand for more options.
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
